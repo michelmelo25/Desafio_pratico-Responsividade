@@ -3,12 +3,17 @@ section header {
   padding-block: 12px 24px;
   font: var(--text-span);
 
-  a {
+  & .grid-flow {
+    grid-auto-flow: column;
+    align-items: center;
+  }
+
+  & a {
     justify-content: end;
     align-items: center;
     gap: 8px;
 
-    span {
+    & span {
       background-image: url(../assets/icons/ArrowRight.svg);
       width: 16px;
       height: 16px;
@@ -18,6 +23,11 @@ section header {
       background-image: url(../assets/icons/ArrowRightHover.svg);
     }
   }
+}
+
+section header.grid-flow {
+  grid-auto-flow: column;
+  align-items: center;
 }
 
 #featured {
@@ -75,23 +85,25 @@ section header {
 #weekly {
   grid-area: weekly;
   & > div {
-    grid-template-columns: repeat(4, 292px);
+    grid-template-columns: 328px;
+    text-wrap-mode: wrap;
   }
-  img {
+  & img {
     height: 160px;
+    width: 328px;
   }
 
-  figure {
+  & figure {
     position: relative;
 
-    .content-tag {
+    & .content-tag {
       position: absolute;
       top: 8px;
       left: 8px;
     }
   }
 
-  p {
+  & p {
     margin-top: 8px;
     font-weight: 800;
   }
@@ -139,31 +151,12 @@ aside {
     & .card {
       width: 100%;
       height: 100%;
-      border-radius: 4px;
-      overflow: hidden;
-      position: relative;
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        top: 50%;
-        background: linear-gradient(180deg, transparent 0%, #020617 100%);
-      }
+    }
+  }
 
-      & .card-md {
-        width: 100%;
-        height: 100%;
-      }
-
-      & figcaption {
-        position: absolute;
-        bottom: 0;
-        padding: 24px;
-
-        &:has(.text-lg) {
-          padding: 12px;
-        }
-      }
+  #weekly {
+    & > div {
+      grid-template-columns: repeat(4, 292px);
     }
   }
 }
