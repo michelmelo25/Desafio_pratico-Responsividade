@@ -6,6 +6,10 @@
   overflow: hidden;
 }
 
+.mobile-only {
+  display: none;
+}
+
 main {
   overflow: auto;
   padding: 4rem;
@@ -46,5 +50,35 @@ aside {
     & span {
       color: var(--text-highlight);
     }
+  }
+}
+
+@media (width < 80em) {
+  #app {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-only {
+    display: initial;
+  }
+
+  .aside-container {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: var(--surface-secondary);
+    margin: -1.5rem;
+    margin-bottom: 1.5rem;
+    padding-block: 1rem;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      width: 312px;
+    }
+  }
+
+  main {
+    padding: 1.5rem;
   }
 }

@@ -1,0 +1,13 @@
+.desktop-only {
+  display: initial;
+}
+
+.flex {
+  display: flex;
+}
+
+@media (width < 80em) {
+  .desktop-only {
+    display: none;
+  }
+}
