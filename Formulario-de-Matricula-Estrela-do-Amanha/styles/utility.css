@@ -6,8 +6,26 @@
   display: flex;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 @media (width < 80em) {
   .desktop-only {
     display: none;
+  }
+
+  #address {
+    & div[class="flex"] {
+      flex-direction: column;
+    }
   }
 }
