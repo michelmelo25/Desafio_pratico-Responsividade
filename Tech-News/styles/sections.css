@@ -112,14 +112,21 @@ section header.grid-flow {
 #ai {
   grid-area: ai;
 
-  img {
-    width: 176px;
+  & img {
+    width: 80px;
+    height: 80px;
     aspect-ratio: 1/1;
     object-fit: cover;
   }
 
-  h3 {
+  & h3 {
     margin-block: 8px 4px;
+  }
+
+  & article.grid-flow {
+    grid-auto-flow: column;
+    direction: rtl;
+    text-align: left;
   }
 }
 
@@ -157,6 +164,26 @@ aside {
   #weekly {
     & > div {
       grid-template-columns: repeat(4, 292px);
+    }
+  }
+
+  #ai {
+    grid-area: ai;
+
+    & img {
+      width: 176px;
+      height: initial;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+
+    & h3 {
+      margin-block: 8px 4px;
+    }
+
+    & article.grid-flow {
+      direction: initial;
+      text-align: initial;
     }
   }
 }
