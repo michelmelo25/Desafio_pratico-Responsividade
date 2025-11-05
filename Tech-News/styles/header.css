@@ -1,6 +1,6 @@
 #primary {
   padding-block: 20px;
-
+  width: 100%;
   & div {
     display: flex;
     align-items: center;
@@ -17,6 +17,10 @@
   }
 }
 
+#primary.grid-flow {
+  grid-auto-flow: column;
+}
+
 #secondary {
   display: flex;
   overflow: scroll;
@@ -29,5 +33,12 @@
 
   & a {
     text-wrap: nowrap;
+  }
+}
+
+@media (width >= 80em) {
+  #secondary {
+    overflow: visible;
+    flex-wrap: nowrap;
   }
 }

@@ -136,6 +136,12 @@ aside {
 
 #more {
   margin-top: 32px;
+  align-items: start;
+
+  & .grid-flow {
+    grid-auto-flow: column;
+  }
+
   h3 {
     margin-top: 8px;
   }
