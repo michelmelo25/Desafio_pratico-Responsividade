@@ -1,22 +1,31 @@
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-block: 20px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    padding-block: 8px;
-
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 8px;
 }
 
 nav ul li:last-child img {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+nav #logo {
+  margin-right: auto;
+}
+
+@media (width >= 80em) {
+  nav ul {
+    gap: 1.5rem;
+  }
 }

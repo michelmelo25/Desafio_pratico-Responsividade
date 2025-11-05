@@ -1,0 +1,41 @@
+.desktop-only {
+  display: none;
+}
+
+.container {
+  --max-width: 360px;
+  padding-inline: 1rem;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-1\.5 {
+  gap: 1.5rem;
+}
+
+.grid {
+  display: grid;
+}
+
+@media (width >= 80em) {
+  .container {
+    --max-width: 80rem;
+    padding-inline: 2rem;
+  }
+
+  .desktop-only {
+    display: initial;
+  }
+}
