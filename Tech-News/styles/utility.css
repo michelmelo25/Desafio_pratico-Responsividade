@@ -2,12 +2,12 @@
   display: grid;
 }
 
-.grid-flow-col {
-  grid-auto-flow: column;
+.grid-flow {
+  grid-auto-flow: row;
 }
 
 .grid-cols-2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 }
 
 .gap-16 {
@@ -41,5 +41,13 @@
 @media (width >= 80em) {
   .desktop-only {
     display: initial;
+  }
+
+  .grid-flow {
+    grid-auto-flow: column;
+  }
+
+  .grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
   }
 }
